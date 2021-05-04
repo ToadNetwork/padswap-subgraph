@@ -6,7 +6,7 @@ import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from './helpers'
 const WBNB_ADDRESS = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
 const BUSD_WBNB_PAIR = '0x1b96b92314c44b159149f7e0303511fb2fc4774f' // created block 589414  NEED TO UPDATE WITH PAD-BNB PAIR OR SOMETHING LIKE IT
 const DAI_WBNB_PAIR = '0xf3010261b58b2874639ca2e860e9005e3be5de0b'  // created block 481116
-const USDT_WBNB_PAIR = '0x20bcc3b8a0091ddac2d0bc30f68e6cbb97de59cd' // created block 648115
+const USDT_WBNB_PAIR = '0x20bcc3b8a0091ddac2d0bc30f68e6cbb97de59cd' // created block 648115 NEED TO UPDATE WITH PAD-LP 
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin

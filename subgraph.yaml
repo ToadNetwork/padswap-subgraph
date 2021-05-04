@@ -8,7 +8,7 @@ dataSources:
     name: Factory
     network: bsc
     source:
-      address: ''
+      address: 'TODO'
       abi: Factory
       startBlock: 7139316
     mapping:

@@ -6,7 +6,7 @@ import { ERC20NameBytes } from '../types/Factory/ERC20NameBytes'
 import { Factory as FactoryContract } from '../types/templates/Pair/Factory'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
-export const FACTORY_ADDRESS = ''
+export const FACTORY_ADDRESS = 'TODO'
 
 export let ZERO_BI = BigInt.fromI32(0)
 export let ONE_BI = BigInt.fromI32(1)
