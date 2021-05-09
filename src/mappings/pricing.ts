@@ -4,10 +4,9 @@ import { BigDecimal, Address } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from './helpers'
 
 const WBNB_ADDRESS = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
-const BUSD_WBNB_PAIR = '0x1b96b92314c44b159149f7e0303511fb2fc4774f' // created block 589414  NEED TO UPDATE WITH PAD-BNB PAIR OR SOMETHING LIKE IT
-const DAI_WBNB_PAIR = '0xf3010261b58b2874639ca2e860e9005e3be5de0b'  // created block 481116
-const USDT_WBNB_PAIR = '0x20bcc3b8a0091ddac2d0bc30f68e6cbb97de59cd' // created block 648115 NEED TO UPDATE WITH PAD-LP 
-
+const BUSD_WBNB_PAIR = '0x1Ed31DB9078FaFA28ba8a2c09C0fa421943cb383' // DONE!
+const DAI_WBNB_PAIR = '0xf3010261b58b2874639ca2e860e9005e3be5de0b'
+const USDT_WBNB_PAIR = '0xce71f919daae7a2d0708f84c657af46f57cbde2b' // Need contract id?
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
   let usdtPair = Pair.load(USDT_WBNB_PAIR) // usdt is token0
@@ -52,10 +51,13 @@ let WHITELIST: string[] = [
   '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c', // BTCB
   '0x2170ed0880ac9a755fd29b2688956bd959f933f8', // WETH
   '0x250632378e573c6be1ac2f97fcdf00515d0aa91b', // BETH
+  '0xc0888d80ee0abf84563168b3182650c0addeb6d5', // PAD
+  '0x463e737d8f740395abf44f7aac2d9531d8d539e9', // TOAD
+  
 ]
 
 // minimum liquidity for price to get tracked
-let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('2')
+let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('1')
 
 /**
  * Search through graph to find derived Eth per token.
